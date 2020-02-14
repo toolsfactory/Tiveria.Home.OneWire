@@ -20,6 +20,7 @@ namespace Tiveria.Home.OneWire.OWServer.Messages
     {
         public const uint ProtocolVersion = 0;
         public const uint HeaderSize = 6 * sizeof(uint);
+        public const int DefaultDataSize = 4096;
         public uint Version => ClientMessageHeader.ProtocolVersion;
         public readonly uint PayloadLength { get; }
         public readonly uint Size { get; }

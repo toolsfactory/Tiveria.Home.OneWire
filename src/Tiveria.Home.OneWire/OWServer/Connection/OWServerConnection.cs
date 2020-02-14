@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 using Tiveria.Home.OneWire.OWServer.Messages;
 
 
-namespace Tiveria.Home.OneWire.OWServer
+namespace Tiveria.Home.OneWire.OWServer.Connection
 {
 
     public class OWServerConnection : IAsyncDisposable, IOWServerConnection
@@ -48,7 +48,10 @@ namespace Tiveria.Home.OneWire.OWServer
         {
             CheckDisposed();
             if (Connected)
-                await DisconnectAsync();
+            {
+                _logger.LogInformation("Ignoring ConnectAsync() call as already connected.");
+                return;
+            }
             _connectionId = Guid.NewGuid();
             using (_logger.BeginScope(_connectionId))
             {

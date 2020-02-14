@@ -1,7 +1,7 @@
 ﻿using System;
 using Tiveria.Common.Extensions;
 
-namespace Tiveria.Home.OneWire.OWServer
+namespace Tiveria.Home.OneWire.OWServer.Connection
 {
     public class ConnectionConfiguration : IConnectionConfiguration
     {

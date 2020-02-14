@@ -3,7 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Tiveria.Home.OneWire.OWServer.Messages;
 
-namespace Tiveria.Home.OneWire.OWServer
+namespace Tiveria.Home.OneWire.OWServer.Connection
 {
     public interface IOWServerConnection
     {
